@@ -1,0 +1,25 @@
+
+#1 Duplicate Integer:
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+         seen = set()
+         for x in nums:
+            if x in seen:
+                return True
+            seen.add(x)
+            return False
+
+#2 Valid Anagram
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        
+        if len(s) != len(t):
+            return False
+
+        countS, countT = {}, {}
+
+        for i in range(len(s))
+            countS[s[i]] = 1 + countS.get(s[i], 0)
+            print(countS)
+
+
