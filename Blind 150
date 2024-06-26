@@ -1,6 +1,12 @@
 
 #1 Duplicate Integer:
 class Solution:
+    
+    ex: nums: [1,2,3,3]
+    create empty set    
+    check for loop for duplicate and check set
+    if x in set then return true else false
+    
     def hasDuplicate(self, nums: List[int]) -> bool:
          seen = set()
          for x in nums:
@@ -11,7 +17,10 @@ class Solution:
 
 #2 Valid Anagram
 class Solution:
-    def isAnagram(self, s: str, t: str) -> bool:
+        ex: s = racecar, t = carrace
+        check length if not the same return false.
+        for loop s then check the frequency of all letters.
+def isAnagram(self, s: str, t: str) -> bool:
         
         if len(s) != len(t):
             return False
