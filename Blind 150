@@ -32,3 +32,35 @@ def isAnagram(self, s: str, t: str) -> bool:
             print(countS)
 
 
+#3 Two Integer Sum
+
+ex: Input: 
+nums = [3,4,5,6], target = 7
+
+Output: [0,1]
+
+enumerate to get the index and values
+create dictionary
+prev = {}
+for i, val in enumerate(num)
+    diff = target - val
+    if diff in prev:
+       return [prev[r], i]
+    prev = i
+
+
+#4 anagram groups:
+
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        res = {} #mapping character count of from list of anagrams 
+        for s in strs:
+            count = [0] * 26 #lowercase a-z
+            for c in s:
+                count[ord(c) - ord("a")]  += 1
+                
+            res[tuple(count)].append(s)
+
+        return res.values()
+
