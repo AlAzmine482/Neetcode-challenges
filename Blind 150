@@ -89,4 +89,17 @@ class Solution:
             postfix *= nums[i]
         return res
 
+
+#6 Valid Palindrome
+
+  checkv is initialized to empty string and check if its alphja numeric
+and append each word to lowercase 
+returning true or false with checkv word and inverse of checkv
+
+  checkv = ""
+        for each in s:
+            if each.isalnum():
+                checkv += each.lower()
+        return checkv == checkv[::-1]
+
             
