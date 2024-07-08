@@ -92,7 +92,7 @@ class Solution:
 
 #6 Valid Palindrome
 
-  checkv is initialized to empty string and check if its alphja numeric
+  checkv is initialized to an empty string and checks if its alpha numeric
 and append each word to lowercase 
 returning true or false with checkv word and inverse of checkv
 
@@ -101,5 +101,22 @@ returning true or false with checkv word and inverse of checkv
             if each.isalnum():
                 checkv += each.lower()
         return checkv == checkv[::-1]
+
+
+#7 Two Sum pointer
+L is initialized at the end of the list. 
+r is initialized at the beginning of the list.
+We compare summation (numbers[l] + numbers[r]) to the target and decrease l  or increase r.
+ex: Input: numbers = [2,7,11,15], target = 9
+Output: [1,2]
+Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].
+
+ l, r=0, len(numbers) - 1
+    
+        while l < r: 
+            if numbers[l] + numbers[r] == target: return (l + 1, r + 1)
+            if numbers[l] + numbers[r] > target: r-=1
+            else: l+=2
+            
 
             
