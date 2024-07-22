@@ -182,4 +182,19 @@ have two-pointers at the beginning and end of the list. set two variables at the
 then increase the left or decrease  the right pointer if it's less or greater. subtract from previous element to the current one on left or right in a if else statement that calc. the result.
 
 
+        l, r = 0, len(heights) - 1
+        leftMax = heights[l]
+        rightMax = height[r]
+        res = 0
+        while l < r:
+            if leftMax < rightMax:
+                l += 1
+            leftMax = max(leftMax,height[l])
+            res += leftMax -height[l]
+            else:
+                r -= 1
+                rightMax = max(rightMax, height[r])
+                res += rightMax - height[r]
+        return res
                 
+    
